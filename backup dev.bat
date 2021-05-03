@@ -1,0 +1,1 @@
+mysqldump -u Barni -p payroll > dev.backup.sql

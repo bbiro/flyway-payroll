@@ -1,0 +1,13 @@
+public RouteComplexPagedListModel GetRoutesByVendor([FromUri] PagingFilterModel filter, int vendorId)
+public RouteComplexModel Get(int id, bool useDetailsStatus = false, bool includeUnscheduledStops = false)
+public RouteComplexModel GetRouteRefresh(int routeid, bool useDetailsStatus = false)
+
+
+        [HttpGet]
+        [Authorize(Roles = "RubiconHauler, RubiconAdmin")]
+        [CommonExceptionFilter]
+        [Route("V2/inventories/{containerId}")]
+        public IHttpActionResult Get(int containerId)
+        {
+            return Ok(_inventoryService.GetVendorContainerDetail(containerId));
+        }
